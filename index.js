@@ -61,7 +61,7 @@ function api(opts) {
     // bower components and the like are served out of /static/{whatever}
     // but they exist in /views/static/{whatever}
     app.use(less(__dirname + '/views'));
-    app.use(serve(__dirname + '/views/static'));
+    app.use(serve(__dirname + '/views'));
 
     // request body handling for legacy modules
     app.use(function *(next) {
@@ -95,7 +95,7 @@ function api(opts) {
     public.get('/', function *() {
         var authenticated = (this.req && this.req.user && this.req.user._id !== undefined);
         yield this.render('index', {
-            title: 'xbutfory',
+            title: 'Boiler',
             loggedIn: authenticated
         });
     });
@@ -116,7 +116,7 @@ function api(opts) {
         this.req.logout();
         this.req.user = undefined;
         yield this.render('index', {
-            title: 'xbutfory',
+            title: 'Boiler',
             loggedIn: false
         });
     });
