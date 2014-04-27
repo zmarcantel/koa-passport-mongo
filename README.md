@@ -3,7 +3,9 @@ Koa-Passport-Mongo Boilerplate
 
 Get up and running quickly.
 
-Check out [What's Included](#what-is-included)
+Fully functional demo site included.
+
+Check out [What's Included](#what-is-included).
 
 
 Installation
@@ -136,6 +138,8 @@ What Is Included
 
 For an in-depth look, check out the `package.json`.
 
+Or, check out the _fully functional_ site included. Register, login, logout, and view your profile all with reactive/stateful navbars.
+
 ### Auth/Security
 
 * [bcrypt](https://www.npmjs.org/package/bcrypt-nodejs) -- bcrypt password hashing
@@ -148,16 +152,19 @@ For an in-depth look, check out the `package.json`.
 
 * [koa](http://koajs.com/) -- obviously
 * [koa-compress](https://www.npmjs.org/package/koa-compress) -- compress responses
-* [co-body](https://www.npmjs.org/package/co-body) -- body parser
-* [koa-logger](https://www.npmjs.org/package/koa-logger) -- basic traffic logger
 * [koa-ratelimit](https://www.npmjs.org/package/koa-ratelimit) -- simple to use rate limiting
-* [koa-response-time](https://www.npmjs.org/package/koa-response-time) -- add response time header
 * [koa-router](https://www.npmjs.org/package/koa-router) -- koa routers make forking middleware easy
 * [koa-static](https://www.npmjs.org/package/koa-static) -- serve static files like images, videos, sound, etc
+* [koa-response-time](https://www.npmjs.org/package/koa-response-time) -- add response time header
+* [koa-logger](https://www.npmjs.org/package/koa-logger) -- basic traffic logger
+* [co-body](https://www.npmjs.org/package/co-body) -- body parser
 
 
 ### Design
 
+* [jQuery](http://jquery.com/) -- the most popular javascript file ever
+* [Bootstrap](https://getbootsrap.com) -- the most popular site building tool
+* [font-awesome](http://fortawesome.github.io/Font-Awesome/) -- the best (and also most freely licensed) svg icon font
 * [koa-hbs](https://www.npmjs.org/package/koa-hbs) -- Handlebars templating
 * [koa-less](https://www.npmjs.org/package/koa-less) -- on the fly LESS file compilation/caching
 
@@ -165,6 +172,6 @@ For an in-depth look, check out the `package.json`.
 
 * [commander](https://www.npmjs.org/package/commander) -- expand command line options
 * [grvtr](https://www.npmjs.org/package/grvtr) -- gravatar fetcher on singup
-* [mongoos](https://www.npmjs.org/package/mongoose) -- most popular MongoDB ODM
+* [mongoose](https://www.npmjs.org/package/mongoose) -- most popular MongoDB ODM
 * [redis](https://www.npmjs.org/package/redis) -- redis client. used for the statistics module and any caching
 * [node-uuid](https://www.npmjs.org/package/node-uuid) -- generate UUIDs for user identification among other things
