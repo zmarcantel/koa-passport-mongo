@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--         <link rel="icon" href="../../assets/ico/favicon.ico"> -->
+
+        <title>{{ title }}</title>
+
+        <link href="/static/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/static/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+        <link href="/static/css/style.css" rel="stylesheet">
+
+        <!-- Just for debugging purposes. Don't actually copy this line! -->
+        <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+          <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <!-- Fixed navbar -->
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/">Boiler</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#">News</a></li>
+                        <li><a href="#">Product</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/#"><i class="fa fa-gear fa-lg"></i></a></li>
+                        <li><a href="/profile">Profile</a></li>
+                        <li><a href="/logout">Logout</a></li>
+                    </ul>
+                </div><!--/.nav-collapse -->
+            </div>
+        </div>
+
+        <div class="container-fluid">
+            <div class="row">
+
+                <div class="profile-wrapper col-xs-12 col-md-12 col-lg-3 col-xl-3 col-lg-offset-1 col-xl-offset-1">
+                    <div class="row">
+                        <div class="profile-header"><h1>Basic Info</h1></div>
+
+                        <div class=" profile-photo-row col-xs-10 col-md-10 col-lg-10 col-xl-10 col-xs-offest-1 col-md-offset-1 col-lg-offset-1 col-xl-offset-1">
+                            <img class="profile-photo" src="{{ photo }}"></img>
+                        </div>
+
+                        <div class="profile-basic-info">
+                            <h1>{{ name }}</h1>
+                            <h3>{{ email }}</h3>
+                        </div>
+                    </div>
+
+                    <div class="profile-links row">
+                        <ul>
+                            <li><a href="#">First</a></li>
+                            <li><a href="#">Second</a></li>
+                            <li><a href="#">Third</a></li>
+                            <li><a href="#">Fourth</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-md-12 col-lg-6 col-xl-6 col-lg-offset-1 col-xl-offset-1">
+                    <div class="profile-header"><h1>Your Stuff</h1></div>
+                </div>
+
+            </div>
+        </div> <!-- /container -->
+
+        <script src="/static/jquery/dist/jquery.min.js"></script>
+        <script src="/static/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script>
+            function register() {
+                $('.form-register .alert').remove();
+
+                var   warned = false
+                    , name = $('.form-register .name').val()
+                    , email = $('.form-register .email').val()
+                    , password = $('.form-register .password').val();
+
+                console.log(name, email, password);
+                if (name.split(" ").length < 2) {
+                    $('.form-register').prepend('<div class="alert alert-danger">You need to supply a first and last name. They will be hidden.</div>');
+                    warned = true;
+                }
+
+                if (!email.match(/.+@.+\..+/)) {
+                    $('.form-register').prepend('<div class="alert alert-danger">Invalid email.</div>');
+                    warned = true;
+                }
+
+                if (password.length < 8) {
+                    $('.form-register').prepend('<div class="alert alert-danger">Passwords should <i>always</i> be 8 or more characters long.</div>');
+                    warned = true;
+                }
+
+                if (!password.match(/[!,@,#,$,%,^,&,*,(,),-,=,_,+,\[,\],{,},\\,;,:,\,,\.,<,>,?,\/]/)) {
+                    $('.form-register').prepend('<div class="alert alert-danger">Passwords must contain a symbol.</div>');
+                    warned = true;
+                }
+
+                if (!password.match(/\d/)) {
+                    $('.form-register').prepend('<div class="alert alert-danger">Passwords must contain a number.</div>');
+                    warned = true;
+                }
+
+                if (warned) { return; }
+
+                $.ajax({
+                    url: '/auth/register',
+                    method: 'POST',
+                    data: JSON.stringify({
+                        name: name,
+                        email: email,
+                        password: password
+                    }),
+                    contentType : 'application/json',
+                    complete: function(xhr, statusText) {
+                        if (xhr.status != 201) {
+                            $('form-register').prepend('<div class="alert alert-danger">' + xhr.responseText + '</p>')
+                        } else {
+                            window.location = '/';
+                        }
+                    }
+                });
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,129 @@
+body {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background: #eeeeee;
+}
+.container-fluid {
+  margin-top: 2em;
+}
+.navbar {
+  color: white;
+  background: #30a0dc;
+}
+.navbar a {
+  color: white !important;
+}
+.form-login {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+.form-login .form-login-heading,
+.form-login .checkbox {
+  margin-bottom: 10px;
+}
+.form-login .checkbox {
+  font-weight: normal;
+}
+.form-login .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-login .form-control:focus {
+  z-index: 2;
+}
+.form-login input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-login input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.form-register {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+.form-register .form-register-heading,
+.form-register .checkbox {
+  margin-bottom: 10px;
+}
+.form-register .checkbox {
+  font-weight: normal;
+}
+.form-register .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-register .form-control:focus {
+  z-index: 2;
+}
+.form-register input {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.profile-wrapper {
+  text-align: center;
+}
+.profile-header {
+  background: #30a0dc;
+  margin-bottom: 2em;
+}
+.profile-header h1 {
+  width: 100%;
+  padding: 0.25em;
+  color: white;
+}
+.profile-photo {
+  width: 200px;
+  height: auto;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.profile-basic-info {
+  padding-left: 2em;
+  text-align: left;
+}
+.profile-basic-info h1,
+.profile-basic-info h3 {
+  margin-top: 0.25em;
+  margin-bottom: 0.25em;
+}
+.profile-links {
+  margin-top: 2em;
+  background: #e1e1e1;
+}
+.profile-links ul {
+  width: 100%;
+  text-align: left;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+.profile-links li {
+  width: 100%;
+}
+.profile-links li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  line-height: 4em;
+  padding-left: 2em;
+}
+.profile-links li a:hover {
+  background-color: #94c7e3;
+}

@@ -1,0 +1,35 @@
+{
+  "name": "x-but-for-y",
+  "version": "0.0.1",
+  "description": "Backend API for xbutfory.com",
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "co-body": "0.0.1",
+    "commander": "~2.1.0",
+    "debug": "*",
+    "grvtr": "~0.1.3",
+    "koa": "~0.1.2",
+    "koa-compress": "1.0.0",
+    "koa-hbs": "^0.4.4",
+    "koa-less": "0.0.1",
+    "koa-logger": "~1.1.0",
+    "koa-ratelimit": "~1.0.1",
+    "koa-response-time": "~1.0.1",
+    "koa-router": "^3.1.2",
+    "koa-session": "^2.0.0",
+    "koa-static": "^1.4.3",
+    "mongoose": "^3.8.8",
+    "node-uuid": "^1.4.1",
+    "passport-local": "^1.0.0",
+    "redis": "~0.10.0",
+    "koa-formidable": "~0.1.0",
+    "koa-passport": "~0.2.0"
+  },
+  "devDependencies": {
+    "bower": "^1.3.2",
+    "mocha": "*",
+    "should": "*",
+    "supertest": "~0.8.2"
+  },
+  "license": "MIT"
+}

@@ -1,0 +1,175 @@
+@base-blue: #94c7e3;
+
+@dark-blue: #30a0dc;
+
+@pale-blue: #cce3f0;
+@pale-grey: #eeeeee;
+
+
+body {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background: @pale-grey;
+}
+
+.container-fluid {
+    margin-top: 2em;
+}
+
+//
+// Nav bar
+//
+
+.navbar {
+    color: white;
+    background: @dark-blue;
+}
+
+.navbar a {
+    color: white !important;
+}
+
+
+//
+// Login
+//
+
+.form-login {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+.form-login .form-login-heading,
+.form-login .checkbox {
+  margin-bottom: 10px;
+}
+.form-login .checkbox {
+  font-weight: normal;
+}
+.form-login .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-login .form-control:focus {
+  z-index: 2;
+}
+.form-login input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-login input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+
+
+//
+// Registration
+//
+
+.form-register {
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+}
+.form-register .form-register-heading,
+.form-register .checkbox {
+  margin-bottom: 10px;
+}
+.form-register .checkbox {
+  font-weight: normal;
+}
+.form-register .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-register .form-control:focus {
+  z-index: 2;
+}
+.form-register input {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+
+
+//
+// Profile
+//
+
+.profile-wrapper {
+    text-align: center;
+}
+
+.profile-header {
+    background: @dark-blue;
+    margin-bottom: 2em;
+
+    h1 {
+        width: 100%;
+        padding: 0.25em;
+        color: white;
+    }
+}
+
+.profile-photo {
+    width: 200px;
+    height: auto;
+
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.profile-basic-info {
+    padding-left: 2em;
+    text-align: left;
+
+    h1, h3 {
+        margin-top: 0.25em;
+        margin-bottom: 0.25em;
+    }
+}
+
+
+.profile-links {
+    margin-top: 2em;
+    background: darken(@pale-grey, 5%);
+
+    ul {
+        width: 100%;
+        text-align: left;
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+    }
+
+    li {
+        width: 100%;
+
+        a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            line-height: 4em;
+            padding-left: 2em;
+        }
+
+        a:hover {
+            background-color: @base-blue;
+        }
+    }
+}

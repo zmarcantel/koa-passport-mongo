@@ -1,0 +1,9 @@
+node_modules/
+log/
+.vagrant
+secrets.jsong
+npm-debug.log
+
+views/static/bootstrap
+views/static/font-awesome
+views/static/jquery
